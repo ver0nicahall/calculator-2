@@ -25,12 +25,22 @@ while True:
 
         #if the first token is q
             #quit
+
     #add
     if operator == '+':
         result = add(float(num1), float(num2))
-    
+
+    #subtract
     if operator == '-':
         result = subtract(float(num1), float(num2))
     
+    # #multiply
+    if operator == '*':
+        result = multiply(float(num1), float(num2))
+
+    #divide
+    if operator == '/':
+        result = divide(float(num1), float(num2))
+    
     #print result to screen
-    print('Result ' + str(result))
+    print('Result: ' + str(result))
