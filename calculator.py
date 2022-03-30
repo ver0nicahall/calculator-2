@@ -14,14 +14,9 @@ while True:
     tokens = user_input.split(' ')
     operator = tokens[0]
     num1 = tokens[1]
-    num2 = tokens[2]
 
-
-    print('User input: ' + str(user_input))
-    print('Tokens: ' + str(tokens))
-    print('operator: ' + str(operator))
-    print('num1: ' + str(num1))
-    print('num2: ' + str(num2))
+    if len(tokens) > 2:
+        num2 = tokens[2]
 
     if operator == 'q':
         break
@@ -44,5 +39,16 @@ while True:
     if operator == '/':
         result = divide(float(num1), float(num2))
     
+    #square
+    if operator == 'square':
+        result = square(float(num1))
+
+    #cube
+    if operator == 'cube':
+        result = cube(float(num1))
+
+    #power
+    #mod
+
     #print result to screen
     print('Result: ' + str(result))
