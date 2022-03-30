@@ -23,6 +23,8 @@ while True:
     print('num1: ' + str(num1))
     print('num2: ' + str(num2))
 
+    if operator == 'q':
+        break
         #if the first token is q
             #quit
 
