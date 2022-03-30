@@ -48,6 +48,9 @@ while True:
         result = cube(float(num1))
 
     #power
+    if operator == '**':
+        result = power(float(num1), float(num2))
+        
     #mod
 
     #print result to screen
