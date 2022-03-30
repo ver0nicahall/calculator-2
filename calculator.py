@@ -12,11 +12,24 @@ print("The calculator has turned on.")
 while True:
     user_input = input('What would you like to perform? ')
     tokens = user_input.split(' ')
+
+    #if anything is a q = quit
+    if 'q' in tokens:
+        print('You have turned the power off. Shutting down.')
+        break 
+
+    #set operator and numbers
     operator = tokens[0]
     num1 = tokens[1]
 
+    #optional third number
     if len(tokens) > 2:
         num2 = tokens[2]
+    
+    #if they enter not a number 
+    if (tokens[1].isdigit() == False) or (tokens[2].isdigit() == False): 
+        print("You have entered an invalid number. Please try again.")
+        continue
 
     if operator == 'q':
         break
@@ -50,8 +63,9 @@ while True:
     #power
     if operator == '**':
         result = power(float(num1), float(num2))
-        
-    #mod
 
+    #mod
+    if operator == '%':
+        result = mod(float(num1), float(num2))
     #print result to screen
     print('Result: ' + str(result))
